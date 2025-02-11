@@ -12,31 +12,28 @@
 		<div class="offcanvas-body">
 				<div class="head-contact d-block d-lg-none">
 						<a href="{{ route('Home') }}" class="logo-side">
-								<img src="{{ asset('images/logo.png') }}" alt="logo">
+								<img src="{{ asset('client/images/logo.png') }}" alt="logo">
 						</a>
 						<div class="mobile-menu-sec mt-3">
 								<ul>
 										<li class="{{ Route::currentRouteName() === 'matches' ? 'active-m' : '' }}">
 												<a href="{{ route('matches') }}"> Matches </a>
 										</li>
-										<li class="{{ Route::currentRouteName() === 'about' ? 'active-m' : '' }}">
+										<li class="{{ Route::currentRouteName() === 'clubs' ? 'active-m' : '' }}">
 												<a href="about.html"> The Club </a>
 										</li>
 
 										<li class="{{ Route::currentRouteName() === 'schedule' ? 'active-m' : '' }}">
-												<a href="schedule.html"> Schedule </a>
+												<a href="{{ route('schedule') }}"> Schedule </a>
 										</li>
 										<li class="{{ Route::currentRouteName() === 'news' ? 'active-m' : '' }}">
-												<a href="news.html"> News </a>
+												<a href="{{ route('news') }}"> News </a>
 										</li>
 										<li class="{{ Route::currentRouteName() === 'players' ? 'active-m' : '' }}">
-												<a href="players.html"> Players </a>
+												<a href="{{ route('players') }}"> Players </a>
 										</li>
 										<li class="{{ Route::currentRouteName() === 'media' ? 'active-m' : '' }}">
-												<a href="media.html"> Media </a>
-										</li>
-										<li class="{{ Route::currentRouteName() === 'shop' ? 'active-m' : '' }}">
-												<a href="shop.html"> Shop </a>
+												<a href="{{ route('media') }}"> Media </a>
 										</li>
 										<li class="{{ Route::currentRouteName() === 'contact' ? 'active-m' : '' }}">
 												<a href="{{ route('contact') }}"> Contact </a>
@@ -147,13 +144,13 @@
 		</div>
 </footer>
 
-<script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
-<script src="{{ asset('js/jquery.min.js') }}"></script>
-<script src="{{ asset('js/custom.js') }}"></script>
+<script src="{{ asset('client/js/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ asset('client/js/jquery.min.js') }}"></script>
+<script src="{{ asset('client/js/custom.js') }}"></script>
 <script src="https://unpkg.com/aos@2.3.0/dist/aos.js"></script>
-<script src="{{ asset('js/owl.carousel.min.js') }}"></script>
+<script src="{{ asset('client/js/owl.carousel.min.js') }}"></script>
 <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
-<script src="{{ asset('js/jquery.fancybox.min.js') }}"></script>
+<script src="{{ asset('client/js/jquery.fancybox.min.js') }}"></script>
 
 <script>
 		AOS.init({

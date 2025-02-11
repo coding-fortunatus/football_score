@@ -2,7 +2,7 @@
 		<nav class="navbar navbar-expand-lg navbar-light ">
 				<div class="container">
 						<a class="navbar-brand" href="{{ route('Home') }}">
-								<img src="{{ asset('images/logo.png') }}" alt="logo" />
+								<img src="{{ asset('client/images/logo.png') }}" alt="logo" />
 						</a>
 						<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRightmobile">
 								<i class="fa fa-bars"></i>
@@ -13,19 +13,19 @@
 												<a class="nav-link" href="{{ route('matches') }}">Matches</a>
 										</li>
 										<li class="nav-item">
-												<a class="nav-link " href="about.html">The Club</a>
+												<a class="nav-link " href="{{ route('clubs') }}">The Club</a>
 										</li>
 										<li class="nav-item">
-												<a class="nav-link " href="schedule.html">Schedule</a>
+												<a class="nav-link " href="{{ route('schedule') }}">Schedule</a>
 										</li>
 										<li class="nav-item">
-												<a class="nav-link " href="news.html">News</a>
+												<a class="nav-link " href="{{ route('news') }}">News</a>
 										</li>
 										<li class="nav-item">
-												<a class="nav-link " href="players.html">Players</a>
+												<a class="nav-link " href="{{ route('players') }}">Players</a>
 										</li>
 										<li class="nav-item">
-												<a class="nav-link " href="media.html">Media</a>
+												<a class="nav-link " href="{{ route('media') }}">Media</a>
 										</li>
 										<li class="nav-item">
 												<a class="nav-link " href="{{ route('contact') }}">Contact</a>

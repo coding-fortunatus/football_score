@@ -1,7 +1,7 @@
 <!-- Required meta tags -->
 <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
 <!-- Bootstrap CSS -->
-<link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+<link href="{{ asset('client/css/bootstrap.min.css') }}" rel="stylesheet">
 <link rel="stylesheet" type="text/css"
 		href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -12,14 +12,14 @@
 		rel="stylesheet">
 
 {{-- <link href="{{ asset('css/all.min.css') }}" rel="stylesheet"> --}}
-<link href="{{ asset('css/style.css') }}" rel="stylesheet">
+<link href="{{ asset('client/css/style.css') }}" rel="stylesheet">
 
-<link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}" />
-<link rel="stylesheet" href="{{ asset('css/owl.theme.default.min.css') }}" />
+<link rel="stylesheet" href="{{ asset('client/css/owl.carousel.min.css') }}" />
+<link rel="stylesheet" href="{{ asset('client/css/owl.theme.default.min.css') }}" />
 
 <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css" />
 <!-- Font Awesome 6 (Latest Version) -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 		integrity="sha384-MDABUOkk2dgtYNYzhoGm6kgjWczOoXdf05Da5MbE2lXbdf5pKo3l9aGf6l3e3wcf" crossorigin="anonymous">
 
-<link rel="stylesheet" type="text/css" href="{{ asset('css/jquery.fancybox.min.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('client/css/jquery.fancybox.min.css') }}">

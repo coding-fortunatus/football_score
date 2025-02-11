@@ -10,31 +10,11 @@
 								<h1 class="text-center"> The Club</h1>
 								<nav aria-label="breadcrumb">
 										<ol class="breadcrumb">
-												<li class="breadcrumb-item"><a href="#">Home</a></li>
+												<li class="breadcrumb-item"><a href="{{ route('Home') }}">Home</a></li>
 												<li class="breadcrumb-item active" aria-current="page">The Club</li>
 										</ol>
 								</nav>
 						</div>
-				</div>
-
-				<div class="cart-sec-ban">
-						<ul class="list-unstyled">
-								<li>
-										<a href="cart.html" class="btn"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-														fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
-														<path
-																d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
-												</svg>
-										</a>
-								</li>
-								<li>
-										<a href="wishlist.html" class="btn"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-														fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
-														<path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
-												</svg>
-										</a>
-								</li>
-						</ul>
 				</div>
 
 		</section>
@@ -48,10 +28,10 @@
 										<div class="row row-cols-1 row-cols-lg-2 g-lg-5">
 												<div class="col position-relative">
 														<figure class="big-img">
-																<img src="images/2821048.webp" alt="pic">
+																<img src="{{ asset('client/images/2821048.webp') }}" alt="pic">
 														</figure>
 														<figure class="small-img">
-																<img src="images/pexels-photo-12460951.jfif" alt="pic2">
+																<img src="{{ asset('client/images/pexels-photo-12460951.jfif') }}" alt="pic2">
 														</figure>
 												</div>
 												<div class="col">
@@ -134,7 +114,7 @@
 														<div class="tab-pane fade show active" id="yd-hom1" role="tabpanel" aria-labelledby="pills-home-tab">
 																<div class="comon-fild-ads1 d-lg-flex align-items-center">
 																		<figure>
-																				<img src="images/bg-ms2.jpeg" alt="bg" />
+																				<img src="{{ asset('client/images/bg-ms2.jpeg') }}" alt="bg" />
 																		</figure>
 
 																		<div class="left-history">
@@ -152,7 +132,7 @@
 														<div class="tab-pane fade" id="yd-hom2" role="tabpanel" aria-labelledby="pills-profile-tab">
 																<div class="comon-fild-ads1 d-lg-flex align-items-center">
 																		<figure>
-																				<img src="images/bg-ms2.jpeg" alt="bg" />
+																				<img src="{{ asset('client/images/bg-ms2.jpeg') }}" alt="bg" />
 																		</figure>
 
 																		<div class="left-history">
@@ -170,7 +150,7 @@
 														<div class="tab-pane fade" id="yd-hom3" role="tabpanel" aria-labelledby="pills-contact-tab">
 																<div class="comon-fild-ads1 d-lg-flex align-items-center">
 																		<figure>
-																				<img src="images/2821048.webp" alt="bg" />
+																				<img src="{{ asset('client/images/2821048.webp') }}" alt="bg" />
 																		</figure>
 
 																		<div class="left-history">
@@ -188,7 +168,7 @@
 														<div class="tab-pane fade" id="yd-hom4" role="tabpanel" aria-labelledby="pills-contact-tab">
 																<div class="comon-fild-ads1 d-lg-flex align-items-center">
 																		<figure>
-																				<img src="images/win.jfif" alt="bg" />
+																				<img src="{{ asset('client/images/win.jfif') }}" alt="bg" />
 																		</figure>
 
 																		<div class="left-history">
@@ -206,7 +186,7 @@
 														<div class="tab-pane fade" id="yd-hom5" role="tabpanel" aria-labelledby="pills-contact-tab">
 																<div class="comon-fild-ads1 d-lg-flex align-items-center">
 																		<figure>
-																				<img src="images/wine2.jpg" alt="bg" />
+																				<img src="{{ asset('client/images/wine2.jpg') }}" alt="bg" />
 																		</figure>
 
 																		<div class="left-history">
@@ -237,7 +217,7 @@
 								<div class="mangemnet-sf owl-carousel owl-theme mt-4">
 										<div class="items-man">
 												<figure>
-														<img src="images/manages-st.jpg" alt="pmg" />
+														<img src="{{ asset('client/images/manages-st.jpg') }}" alt="pmg" />
 												</figure>
 												<div class="name">
 														<h5> Jores Leperto
@@ -248,7 +228,7 @@
 
 										<div class="items-man">
 												<figure>
-														<img src="images/manages-st2.jpg" alt="pmg" />
+														<img src="{{ asset('client/images/manages-st2.jpg') }}" alt="pmg" />
 												</figure>
 												<div class="name">
 														<h5> Jores Leperto
@@ -259,7 +239,7 @@
 
 										<div class="items-man">
 												<figure>
-														<img src="images/manages-st3.jpg" alt="pmg" />
+														<img src="{{ asset('client/images/manages-st3.jpg') }}" alt="pmg" />
 												</figure>
 												<div class="name">
 														<h5> Jores Leperto
@@ -270,7 +250,7 @@
 
 										<div class="items-man">
 												<figure>
-														<img src="images/manages-st4.jpg" alt="pmg" />
+														<img src="client/images/manages-st4.jpg" alt="pmg" />
 												</figure>
 												<div class="name">
 														<h5> Jores Leperto
@@ -290,7 +270,7 @@
 								<div class="achivent-slide owl-carousel owl-theme mt-5">
 										<div class="items-achiv">
 												<figure>
-														<img src="images/award-img1.png" alt="ad1" />
+														<img src="client/images/award-img1.png" alt="ad1" />
 												</figure>
 												<div class="achiv-titel">
 														<h5> 2010 world FC cup champion </h5>
@@ -299,7 +279,7 @@
 
 										<div class="items-achiv">
 												<figure>
-														<img src="images/award-img3.png" alt="ad1" />
+														<img src="client/images/award-img3.png" alt="ad1" />
 												</figure>
 												<div class="achiv-titel">
 														<h5> 2012 United CD cup champion </h5>
@@ -308,7 +288,7 @@
 
 										<div class="items-achiv">
 												<figure>
-														<img src="images/award-img4.png" alt="ad1" />
+														<img src="client/images/award-img4.png" alt="ad1" />
 												</figure>
 												<div class="achiv-titel">
 														<h5> 2014 world cup champion </h5>
@@ -317,7 +297,7 @@
 
 										<div class="items-achiv">
 												<figure>
-														<img src="images/award-img1.png" alt="ad1" />
+														<img src="client/images/award-img1.png" alt="ad1" />
 												</figure>
 												<div class="achiv-titel">
 														<h5> 2015 FC cup champion </h5>
@@ -326,7 +306,7 @@
 
 										<div class="items-achiv">
 												<figure>
-														<img src="images/award-img4.png" alt="ad1" />
+														<img src="client/images/award-img4.png" alt="ad1" />
 												</figure>
 												<div class="achiv-titel">
 														<h5> 2014 world cup champion </h5>
