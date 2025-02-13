@@ -13,7 +13,7 @@
 														<i class="bi bi-life-preserver"></i>
 												</div>
 												<div class="sale-details">
-														<h3 class="text-red">10</h3>
+														<h3 class="text-red">{{ $leagues }}</h3>
 														<p>Leagues</p>
 												</div>
 										</div>
@@ -25,7 +25,7 @@
 														<i class="bi bi-person-check"></i>
 												</div>
 												<div class="sale-details">
-														<h3 class="text-blue">24</h3>
+														<h3 class="text-blue">{{ $officials }}</h3>
 														<p>Officials</p>
 												</div>
 										</div>
@@ -37,7 +37,7 @@
 														<i class="bi bi-ui-checks"></i>
 												</div>
 												<div class="sale-details">
-														<h3 class="text-yellow">20</h3>
+														<h3 class="text-yellow">{{ $teams }}</h3>
 														<p>Teams</p>
 												</div>
 										</div>
@@ -49,7 +49,7 @@
 														<i class="bi bi-people"></i>
 												</div>
 												<div class="sale-details">
-														<h3 class="text-green">200</h3>
+														<h3 class="text-green">{{ $players }}</h3>
 														<p>Players</p>
 												</div>
 										</div>
@@ -173,55 +173,21 @@
 								<div class="col-sm-6 col-12">
 										<div class="card">
 												<div class="card-header">
-														<div class="card-title">Officials</div>
+														<div class="card-title">Available Refrees</div>
 												</div>
 												<div class="card-body">
 														<div class="scroll370">
 																<ul class="user-messages">
-																		<li>
-																				<div class="customer shade-blue">MK</div>
-																				<div class="delivery-details">
-																						<span class="badge shade-blue">Refree</span>
-																						<h5>Marie Kieffer</h5>
-																						<p>Thanks for choosing Apple product, further if you have any questions please contact sales
-																								team.</p>
-																				</div>
-																		</li>
-																		<li>
-																				<div class="customer shade-yellow">ES</div>
-																				<div class="delivery-details">
-																						<span class="badge shade-yellow">Line Man</span>
-																						<h5>Ewelina Sikora</h5>
-																						<p>Boost your sales by 50% with the easiest and proven marketing tool for customer enggement
-																								&amp; motivation.</p>
-																				</div>
-																		</li>
-																		<li>
-																				<div class="customer shade-yellow">TN</div>
-																				<div class="delivery-details">
-																						<span class="badge shade-yellow">Line Mna</span>
-																						<h5>Teboho Ncube</h5>
-																						<p>Use an exclusive promo code HKYMM50 and get 50% off on your first order in the new year.
-																						</p>
-																				</div>
-																		</li>
-																		<li>
-																				<div class="customer shade-blue">CJ</div>
-																				<div class="delivery-details">
-																						<span class="badge shade-blue">Refree</span>
-																						<h5>Carla Jackson</h5>
-																						<p>Befor inviting the administrator, you must create a role that can be assigned to them.
-																						</p>
-																				</div>
-																		</li>
-																		<li>
-																				<div class="customer shade-red">JK</div>
-																				<div class="delivery-details">
-																						<span class="badge shade-red">Red Cross</span>
-																						<h5>Julie Kemp</h5>
-																						<p>Your security subscription has expired. Please renew the subscription.</p>
-																				</div>
-																		</li>
+																		@foreach ($refrees as $refree)
+																				<li>
+																						<div class="customer shade-blue">MK</div>
+																						<div class="delivery-details">
+																								<span class="badge shade-blue">{{ $refree->role }}</span>
+																								<h5>{{ $refree->fullname }}</h5>
+																								<p>{{ $refree->phone }}</p>
+																						</div>
+																				</li>
+																		@endforeach
 																</ul>
 														</div>
 												</div>
@@ -231,72 +197,26 @@
 								<div class="col-sm-6 col-12">
 										<div class="card">
 												<div class="card-header">
-														<div class="card-title">Leagues</div>
+														<div class="card-title">Leagues Scheduled</div>
 												</div>
 												<div class="card-body">
 
 														<div class="scroll370">
 																<div class="activity-container">
-																		<div class="activity-block">
-																				<div class="activity-user">
-																						<img src="assets/images/user.png" alt="Activity User">
+																		@foreach ($scheduled_leagues as $league)
+																				<div class="activity-block">
+																						<div class="activity-user">
+																								<img src="{{ url($league->photo) }}" alt="Activity User">
+																						</div>
+																						<div class="activity-details">
+																								<h4>{{ $league->title }}</h4>
+																								<h5>{{ $league->teams }} Teams</h5>
+																								<h5>{{ $league->start_date }} to {{ $league->end_date }}</h5>
+																								<p>{{ $league->semester_season }}</p>
+																								<span class="badge shade-green">{{ $league->status }}</span>
+																						</div>
 																				</div>
-																				<div class="activity-details">
-																						<h4>Institutional Football League 2025</h4>
-																						<h5>10 Teams</h5>
-																						<h5>2025-03-01 to 2025-07-30</h5>
-																						<p>Knockout</p>
-																						<span class="badge shade-green">Started</span>
-																				</div>
-																		</div>
-																		<div class="activity-block">
-																				<div class="activity-user">
-																						<img src="assets/images/user3.png" alt="Activity User">
-																				</div>
-																				<div class="activity-details">
-																						<h4>Institutional Football League 2025</h4>
-																						<h5>10 Teams</h5>
-																						<h5>2025-03-01 to 2025-07-30</h5>
-																						<p>Knockout</p>
-																						<span class="badge shade-red">Payments</span>
-																				</div>
-																		</div>
-																		<div class="activity-block">
-																				<div class="activity-user">
-																						<img src="assets/images/user4.png" alt="Activity User">
-																				</div>
-																				<div class="activity-details">
-																						<h4>Institutional Football League 2025</h4>
-																						<h5>10 Teams</h5>
-																						<h5>2025-03-01 to 2025-07-30</h5>
-																						<p>Knockout</p>
-																						<span class="badge shade-green">Paid</span>
-																				</div>
-																		</div>
-																		<div class="activity-block">
-																				<div class="activity-user">
-																						<img src="assets/images/user5.png" alt="Activity User">
-																				</div>
-																				<div class="activity-details">
-																						<h4>Institutional Football League 2025</h4>
-																						<h5>10 Teams</h5>
-																						<h5>2025-03-01 to 2025-07-30</h5>
-																						<p>Knockout</p>
-																						<span class="badge shade-green">Sent</span>
-																				</div>
-																		</div>
-																		<div class="activity-block">
-																				<div class="activity-user">
-																						<img src="assets/images/user2.png" alt="Activity User">
-																				</div>
-																				<div class="activity-details">
-																						<h4>Institutional Football League 2025</h4>
-																						<h5>10 Teams</h5>
-																						<h5>2025-03-01 to 2025-07-30</h5>
-																						<p>Knockout</p>
-																						<span class="badge shade-red">Invoice</span>
-																				</div>
-																		</div>
+																		@endforeach
 																</div>
 														</div>
 
