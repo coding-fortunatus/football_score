@@ -21,11 +21,11 @@ class UpdateOfficialRequest extends FormRequest
      */
     public function rules(): array
     {
-        $id = $this->route('ooficial');
+        $id = $this->route('official_uuid');
         return [
-            'fullname' => 'required|string|unique:officials,fullname,' . $id,
-            'email' => 'required|email|unique:officials,email,' . $id,
-            'phone' => 'required|string|unique:officials,phone,' . $id,
+            'fullname' => "required|string|unique:officials,fullname,{$id},official_uuid",
+            'email' => "required|email|unique:officials,email,{$id},official_uuid",
+            'phone' => "required|string|unique:officials,phone,{$id},official_uuid",
             'role' => 'required|string',
             'photo' => 'nullable|image',
         ];

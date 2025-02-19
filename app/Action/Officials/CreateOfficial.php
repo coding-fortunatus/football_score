@@ -8,10 +8,12 @@ class CreateOfficial
 {
     public function execute($request)
     {
-        $official = Official::create($request->all());
-        if ($official) {
-            return true;
+        if ($request->hasFile('photo')) {
+            $path = $request->file('photo')->store('officials');
+            // dd($path);
         }
-        return false;
+        $request->merge(['photo' => $path]);
+        $official = Official::create($request->validated());
+        return $official ? true : false;
     }
 }

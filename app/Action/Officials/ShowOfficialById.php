@@ -8,7 +8,7 @@ class ShowOfficialById
 {
     public function execute($id)
     {
-        $official = Official::find($id);
+        $official = Official::where('official_uuid', $id)->first();
         if (!empty($official)) {
             return $official;
         }

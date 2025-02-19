@@ -17,7 +17,7 @@
 						<i class="bi bi-house"></i>
 						<a href="{{ route('Dashboard') }}">Home</a>
 				</li>
-				<li class="breadcrumb-item breadcrumb-active" aria-current="page">Dashboard</li>
+				@yield('breadcrumb')
 		</ol>
 		<!-- Breadcrumb end -->
 

@@ -1,10 +1,20 @@
 <?php
 
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\OfficialController;
 use Illuminate\Support\Facades\Route;
 
 Route::prefix('admin')->group(function () {
     Route::get('/dashboard', DashboardController::class)->name('Dashboard');
+    Route::controller(OfficialController::class)->prefix('officials')->group(function () {
+        Route::get('/', 'index')->name('officials.index');
+        // Route::get('/{official_uuid}', 'show')->name('officials.show');
+        Route::get('/create', 'create')->name('officials.create');
+        Route::post('/store', 'store')->name('officials.store');
+        Route::get('/edit/{official_uuid}', 'edit')->name('officials.edit');
+        Route::put('/update/{official_uuid}', 'update')->name('officials.update');
+        Route::delete('/delete/{official_uuid}', 'destroy')->name('officials.destroy');
+    });
 });
 
 Route::get('/', function () {

@@ -1,5 +1,9 @@
 @extends('admin.layout.admin')
 
+@section('breadcrumb')
+		<li class="breadcrumb-item breadcrumb-active" aria-current="page">Dashboard</li>
+@endsection
+
 @section('content')
 		<!-- Content wrapper scroll start -->
 		<div class="content-wrapper-scroll">

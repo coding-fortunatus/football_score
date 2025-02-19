@@ -26,7 +26,7 @@ class CreateOfficialRequest extends FormRequest
             'email' => 'required|email|unique:officials,email',
             'phone' => 'required|string|unique:officials,phone',
             'role' => 'required|string',
-            'photo' => 'nullable|image',
+            'photo' => 'nullable|image:mimes:jpg,png,jpeg',
         ];
     }
 }

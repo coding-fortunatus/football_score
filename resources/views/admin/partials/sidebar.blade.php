@@ -85,22 +85,11 @@
 										</div>
 								</li>
 								{{-- Officials --}}
-								<li class="sidebar-dropdown">
-										<a href="#">
+								<li>
+										<a href="{{ route('officials.index') }}">
 												<i class="bi bi-person-check"></i>
 												<span class="menu-text">Officials</span>
 										</a>
-										<div class="sidebar-submenu">
-												<ul>
-														<li>
-																<a href="#">Create Official</a>
-														</li>
-
-														<li>
-																<a href="#">Ofiicial List</a>
-														</li>
-												</ul>
-										</div>
 								</li>
 								{{-- Fields --}}
 								<li class="sidebar-dropdown">
