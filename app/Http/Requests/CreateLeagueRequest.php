@@ -28,7 +28,7 @@ class CreateLeagueRequest extends FormRequest
             'start_date' => 'required|date',
             'end_date' => 'required|date',
             'status' => 'required|string',
-            'photo' => 'required|image',
+            'photo' => 'nullable|image',
         ];
     }
 }

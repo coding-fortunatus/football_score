@@ -126,21 +126,11 @@
 										</div>
 								</li>
 								{{-- Leagues --}}
-								<li class="sidebar-dropdown">
-										<a href="#">
+								<li>
+										<a href="{{ route('leagues.index') }}">
 												<i class="bi bi-life-preserver"></i>
 												<span class="menu-text">Leagues</span>
 										</a>
-										<div class="sidebar-submenu">
-												<ul>
-														<li>
-																<a href="#">Create League</a>
-														</li>
-														<li>
-																<a href="#">View Leagues</a>
-														</li>
-												</ul>
-										</div>
 								</li>
 						</ul>
 				</div>

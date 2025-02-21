@@ -21,15 +21,15 @@ class UpdateLeagueRequest extends FormRequest
      */
     public function rules(): array
     {
-        $id = $this->route('league');
+        $id = $this->route('league_uuid');
         return [
-            'title' => 'required|string|unique:leagues,title,' . $id,
+            'title' => "required|string|unique:leagues,title,{$id},league_uuid",
             'semester_season' => 'required|string',
             'teams' => 'required|integer',
             'start_date' => 'required|date',
             'end_date' => 'required|date',
             'status' => 'required|string',
-            'photo' => 'required|image',
+            'photo' => 'nullable|image',
         ];
     }
 }

@@ -14,6 +14,7 @@ class League extends Model
         parent::boot();
         self::creating(function ($model) {
             $model->league_uuid = Str::uuid();
+            $model->slug = Str::slug($model->title);
         });
     }
 }
