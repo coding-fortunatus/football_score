@@ -21,10 +21,10 @@ class UpdatePlayerRequest extends FormRequest
      */
     public function rules(): array
     {
-        $id = $this->route('player');
+        $id = $this->route('player_uuid');
         return [
             'fullname' => 'required|string',
-            'phone' => 'required|string|unique:players,phone,' . $id,
+            'phone' => "required|string|unique:players,phone,{$id},player_uuid",
             'position' => 'required|string',
             'wing' => 'required|integer',
             'skill_level' => 'required|integer',

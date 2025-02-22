@@ -58,21 +58,11 @@
 										</a>
 								</li>
 								{{-- Players --}}
-								<li class="sidebar-dropdown">
-										<a href="#">
+								<li>
+										<a href="{{ route('players.index') }}">
 												<i class="bi bi-people"></i>
 												<span class="menu-text">Players</span>
 										</a>
-										<div class="sidebar-submenu">
-												<ul>
-														<li>
-																<a href="#">Create Player</a>
-														</li>
-														<li>
-																<a href="#">Player List</a>
-														</li>
-												</ul>
-										</div>
 								</li>
 								{{-- Officials --}}
 								<li>
