@@ -1,7 +1,7 @@
 @extends('admin.layout.admin')
 
 @section('breadcrumb')
-		<li class="breadcrumb-item breadcrumb-active" aria-current="page">Leagues</li>
+		<li class="breadcrumb-item breadcrumb-active" aria-current="page">Teams</li>
 @endsection
 @section('content')
 		<!-- Content wrapper scroll start -->
@@ -25,10 +25,10 @@
 														</div>
 												@endsession
 												<div class="card-header">
-														<div class="card-title">Leagues</div>
+														<div class="card-title">Teams</div>
 														<div class="card-options">
-																<a href="{{ route('leagues.create') }}" class="btn btn-primary btn-sm">
-																		<i class="bi bi-plus"></i> New League
+																<a href="{{ route('teams.create') }}" class="btn btn-primary btn-sm">
+																		<i class="bi bi-plus"></i> New Team
 																</a>
 														</div>
 												</div>
@@ -38,48 +38,38 @@
 																		<thead>
 																				<tr>
 																						<th>#</th>
-																						<th>Title</th>
-																						<th>Season</th>
-																						<th>Teams</th>
-																						<th class="text-right">Starts</th>
-																						<th class="text-right">Ends</th>
-																						<th>Status</th>
-																						<th>Photo</th>
+																						<th>Team Name</th>
+																						<th>Short Name</th>
+																						<th>Faculty</th>
+																						<th class="text-right">Date Added</th>
+																						<th>Picture</th>
 																				</tr>
 																		</thead>
 																		<tbody>
 																				@if ($message === true)
 																						<tr>
-																								<td colspan="8" class="text-center">No leagues found</td>
+																								<td colspan="7" class="text-center">No teams found</td>
 																						</tr>
 																				@else
-																						@foreach ($leagues as $league)
+																						@foreach ($teams as $team)
 																								<tr>
-																										<td>{{ $league->id }}</td>
-																										<td>{{ $league->title }}</td>
-																										<td>{{ $league->semester_season }}</td>
-																										<td>{{ $league->teams }}</td>
-																										<td class="text-right">{{ $league->start_date }}</td>
-																										<td class="text-right">{{ $league->end_date }}</td>
-																										<td><span class="badge shade-blue">
-																														@if ($league->status === '1')
-																																Active
-																														@else
-																																Inactive
-																														@endif
-																												</span></td>
+																										<td>{{ $team->id }}</td>
+																										<td>{{ $team->name }}</td>
+																										<td>{{ $team->short_name }}</td>
+																										<td>{{ $team->faculty }}</td>
+																										<td class="text-right">{{ $team->created_at }}</td>
 																										<td>
 																												<div class="activity-user">
-																														<img src="{{ asset('storage/' . $league->photo) }}" alt="Activity league">
+																														<img src="{{ asset('storage/' . $team->logo) }}" alt="Activity User">
 																												</div>
 																										</td>
 																										<td class="text-danger">
-																												<a href="{{ route('leagues.edit', $league->league_uuid) }}" title="edit">
+																												<a href="{{ route('teams.edit', $team->team_uuid) }}" title="edit">
 																														<i class="bi bi-pencil-fill"></i>
 																												</a>
 																										</td>
 																										<td class="text-danger">
-																												<a href="{{ route('leagues.destroy', $league->league_uuid) }}" title="delete">
+																												<a href="{{ route('teams.destroy', $team->team_uuid) }}" title="delete">
 																														<i class="bi bi-trash-fill"></i>
 																												</a>
 																										</td>

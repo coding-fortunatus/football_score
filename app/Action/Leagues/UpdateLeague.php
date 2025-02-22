@@ -6,12 +6,9 @@ use App\Models\League;
 
 class UpdateLeague
 {
-    public function execute($request, $id)
+    public function execute($request, string $id)
     {
         $league = League::where('league_uuid', $id);
-        if ($league) {
-            return $league->update($request->validated());
-        }
-        return false;
+        return $league ? $league->update($request->validated()) : false;
     }
 }

@@ -51,21 +51,11 @@
 										</div>
 								</li>
 								{{-- Teams --}}
-								<li class="sidebar-dropdown">
-										<a href="#">
+								<li>
+										<a href="{{ route('teams.index') }}">
 												<i class="bi bi-ui-checks"></i>
 												<span class="menu-text">Teams</span>
 										</a>
-										<div class="sidebar-submenu">
-												<ul>
-														<li>
-																<a href="#">Create team</a>
-														</li>
-														<li>
-																<a href="#">Team list</a>
-														</li>
-												</ul>
-										</div>
 								</li>
 								{{-- Players --}}
 								<li class="sidebar-dropdown">

@@ -3,6 +3,7 @@
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\LeagueController;
 use App\Http\Controllers\OfficialController;
+use App\Http\Controllers\TeamController;
 use Illuminate\Support\Facades\Route;
 
 Route::prefix('admin')->group(function () {
@@ -24,6 +25,15 @@ Route::prefix('admin')->group(function () {
         Route::get('/edit/{league_uuid}', 'edit')->name('leagues.edit');
         Route::put('/update/{league_uuid}', 'update')->name('leagues.update');
         Route::get('/delete/{league_uuid}', 'destroy')->name('leagues.destroy');
+    });
+    Route::controller(TeamController::class)->prefix('teams')->group(function () {
+        Route::get('/', 'index')->name('teams.index');
+        // Route::get('/{team_uuid}', 'show')->name('teams.show');
+        Route::get('/create', 'create')->name('teams.create');
+        Route::post('/store', 'store')->name('teams.store');
+        Route::get('/edit/{team_uuid}', 'edit')->name('teams.edit');
+        Route::put('/update/{team_uuid}', 'update')->name('teams.update');
+        Route::get('/delete/{team_uuid}', 'destroy')->name('teams.destroy');
     });
 });
 

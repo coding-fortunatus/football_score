@@ -25,7 +25,6 @@ class CreateTeamRequest extends FormRequest
             'name' => 'required|string|unique:teams,name',
             'short_name' => 'nullable|string|unique:teams,short_name',
             'faculty' => 'required|string',
-            'department' => 'required|string',
             'logo' => 'nullable|image'
         ];
     }

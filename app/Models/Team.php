@@ -14,6 +14,7 @@ class Team extends Model
         parent::boot();
         self::creating(function ($model) {
             $model->team_uuid = Str::uuid();
+            $model->slug      = Str::slug($model->name);
         });
     }
 

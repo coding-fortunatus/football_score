@@ -21,12 +21,11 @@ class UpdateTeamRequest extends FormRequest
      */
     public function rules(): array
     {
-        $id = $this->route('team');
+        $id = $this->route('team_uuid');
         return [
-            'name' => 'required|string|unique:teams,name,' . $id,
-            'short_name' => 'nullable|string|unique:teams,short_name,' . $id,
+            'name' => "required|string|unique:teams,name,{$id},team_uuid",
+            'short_name' => "nullable|string|unique:teams,short_name,{$id},team_uuid",
             'faculty' => 'required|string',
-            'department' => 'required|string',
             'logo' => 'nullable|image'
         ];
     }
