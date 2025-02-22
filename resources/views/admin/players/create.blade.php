@@ -52,8 +52,13 @@
 																		<div class="col-xl-4 col-sm-6 col-12">
 																				<div class="mb-3">
 																						<label for="position" class="form-label">Player Position</label>
-																						<input type="number" class="form-control" name="position" id="position"
-																								placeholder="Enter player position" value="{{ old('position') }}">
+																						<select class="form-select" name="position" id="TeamClub">
+																								<option selected disabled> Select player position </option>
+																								<option value="keeper">Keeper</option>
+																								<option value="defender">Defender</option>
+																								<option value="midfielder">Mid-fielder</option>
+																								<option value="striker">Striker</option>
+																						</select>
 																				</div>
 																				@error('position')
 																						<small class="text-danger">{{ $message }}</small>
@@ -62,8 +67,20 @@
 																		<div class="col-xl-4 col-sm-6 col-12">
 																				<div class="mb-3">
 																						<label for="wing" class="form-label">Player Wing</label>
-																						<input type="number" class="form-control" name="wing" id="wing"
-																								placeholder="Enter player wing" value="{{ old('wing') }}">
+																						<select class="form-select" name="wing" id="TeamClub">
+																								<option selected disabled> Select player wing </option>
+																								<option value="1">1 - Keeper</option>
+																								<option value="2">2 - Defense</option>
+																								<option value="3">3 - Defense</option>
+																								<option value="4">4 - Defensive Mid-field</option>
+																								<option value="5">5 - Defense</option>
+																								<option value="6">6 - Defense</option>
+																								<option value="7">7 - Striker</option>
+																								<option value="8">8 - Mid-field</option>
+																								<option value="9">9 - Striker</option>
+																								<option value="10">10 - Mid-field</option>
+																								<option value="11">11 - Striker</option>
+																						</select>
 																				</div>
 																				@error('wing')
 																						<small class="text-danger">{{ $message }}</small>

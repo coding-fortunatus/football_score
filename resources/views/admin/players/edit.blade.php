@@ -54,8 +54,14 @@
 																		<div class="col-xl-4 col-sm-6 col-12">
 																				<div class="mb-3">
 																						<label for="position" class="form-label">Player Position</label>
-																						<input type="number" class="form-control" name="position" id="position"
-																								placeholder="Enter player position" value="{{ $player->position }}">
+																						<select class="form-select" name="position" id="TeamClub">
+																								<option disabled> Select player position </option>
+																								<option value="Keeper" {{ $player->position == 'Keeper' ? 'selected' : '' }}>Keeper</option>
+																								<option value="Defender" {{ $player->position == 'Defender' ? 'selected' : '' }}>Defender</option>
+																								<option value="Mid-fielder" {{ $player->position == 'Mid-fielder' ? 'selected' : '' }}>Mid-fielder
+																								</option>
+																								<option value="Striker" {{ $player->position == 'Striker' ? 'selected' : '' }}>Striker</option>
+																						</select>
 																				</div>
 																				@error('position')
 																						<small class="text-danger">{{ $message }}</small>
@@ -64,8 +70,21 @@
 																		<div class="col-xl-4 col-sm-6 col-12">
 																				<div class="mb-3">
 																						<label for="wing" class="form-label">Player Wing</label>
-																						<input type="number" class="form-control" name="wing" id="wing"
-																								placeholder="Enter player wing" value="{{ $player->wing }}">
+																						<select class="form-select" name="wing" id="TeamClub">
+																								<option selected disabled> Select player wing </option>
+																								<option value="1" {{ $player->wing == 1 ? 'selected' : '' }}>1 - Keeper</option>
+																								<option value="2" {{ $player->wing == 2 ? 'selected' : '' }}>2 - Defense</option>
+																								<option value="3" {{ $player->wing == 3 ? 'selected' : '' }}>3 - Defense</option>
+																								<option value="4" {{ $player->wing == 4 ? 'selected' : '' }}>4 - Defensive Mid-field
+																								</option>
+																								<option value="5" {{ $player->wing == 5 ? 'selected' : '' }}>5 - Defense</option>
+																								<option value="6" {{ $player->wing == 6 ? 'selected' : '' }}>6 - Defense</option>
+																								<option value="7" {{ $player->wing == 7 ? 'selected' : '' }}>7 - Striker</option>
+																								<option value="8" {{ $player->wing == 8 ? 'selected' : '' }}>8 - Mid-field</option>
+																								<option value="9" {{ $player->wing == 9 ? 'selected' : '' }}>9 - Striker</option>
+																								<option value="10" {{ $player->wing == 10 ? 'selected' : '' }}>10 - Mid-field</option>
+																								<option value="11" {{ $player->wing == 11 ? 'selected' : '' }}>11 - Striker</option>
+																						</select>
 																				</div>
 																				@error('wing')
 																						<small class="text-danger">{{ $message }}</small>
