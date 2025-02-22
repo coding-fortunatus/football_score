@@ -21,11 +21,11 @@ class UpdateCoachRequest extends FormRequest
      */
     public function rules(): array
     {
-        $id = $this->route('coach');
+        $id = $this->route('coach_uuid');
         return [
             'fullname' => 'required|string',
-            'email' => 'required|string|email|unique:coaches,email,' . $id,
-            'phone' => 'required|string',
+            'email' => "required|string|email|unique:coaches,email,{$id},coach_uuid",
+            'phone' => "required|string|unique:coaches,phone,{$id},coach_uuid",
             'description' => 'required|string',
             'success_rate' => 'required|numeric',
             'photo' => 'nullable|image',

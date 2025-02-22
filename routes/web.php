@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CoachController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\LeagueController;
 use App\Http\Controllers\OfficialController;
@@ -34,6 +35,15 @@ Route::prefix('admin')->group(function () {
         Route::get('/edit/{team_uuid}', 'edit')->name('teams.edit');
         Route::put('/update/{team_uuid}', 'update')->name('teams.update');
         Route::get('/delete/{team_uuid}', 'destroy')->name('teams.destroy');
+    });
+    Route::controller(CoachController::class)->prefix('coaches')->group(function () {
+        Route::get('/', 'index')->name('coaches.index');
+        // Route::get('/{coach_uuid}', 'show')->name('coaches.show');
+        Route::get('/create', 'create')->name('coaches.create');
+        Route::post('/store', 'store')->name('coaches.store');
+        Route::get('/edit/{coach_uuid}', 'edit')->name('coaches.edit');
+        Route::put('/update/{coach_uuid}', 'update')->name('coaches.update');
+        Route::get('/delete/{coach_uuid}', 'destroy')->name('coaches.destroy');
     });
 });
 

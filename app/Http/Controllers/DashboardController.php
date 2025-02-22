@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Action\Coaches\FetchAllCoache;
+use App\Models\Coach;
 use App\Models\League;
 use App\Models\Official;
 use App\Models\Player;
@@ -10,7 +12,7 @@ use Illuminate\Http\Request;
 
 class DashboardController extends Controller
 {
-    public function __invoke()
+    public function __invoke(FetchAllCoache $action)
     {
         $players = Player::count();
         $teams   = Team::count();
@@ -19,6 +21,8 @@ class DashboardController extends Controller
 
         $scheduled_leagues = League::all()->where('status', 'Scheduled');
         $refrees           = Official::all()->where('role', 'Refree');
+        $coaches           = $action->execute();
+        $message           = $coaches ? false : true;
         return view(
             'admin.index',
             [
@@ -27,7 +31,9 @@ class DashboardController extends Controller
                 'leagues' => $leagues,
                 'officials' => $officials,
                 'scheduled_leagues' => $scheduled_leagues,
-                'refrees' => $refrees
+                'refrees' => $refrees,
+                'coaches' => $coaches,
+                'message' => $message,
             ]
         );
     }
