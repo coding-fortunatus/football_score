@@ -1,8 +1,8 @@
 <header class="float-start w-100">
-		<nav class="navbar navbar-expand-lg navbar-light ">
+		<nav class="navbar navbar-expand-lg navbar-light " style="background-color: white;">
 				<div class="container">
 						<a class="navbar-brand" href="{{ route('Home') }}">
-								<img src="{{ asset('client/images/logo.png') }}" alt="logo" />
+								<img width="50%" src="{{ asset('client/images/logo.png') }}" alt="logo" />
 						</a>
 						<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRightmobile">
 								<i class="fa fa-bars"></i>
@@ -13,7 +13,7 @@
 												<a class="nav-link" href="{{ route('matches') }}">Matches</a>
 										</li>
 										<li class="nav-item">
-												<a class="nav-link " href="{{ route('clubs') }}">The Club</a>
+												<a class="nav-link " href="{{ route('clubs') }}">Teams</a>
 										</li>
 										<li class="nav-item">
 												<a class="nav-link " href="{{ route('schedule') }}">Schedule</a>
