@@ -11,7 +11,7 @@
 		</div>
 		<div class="offcanvas-body">
 				<div class="head-contact d-block d-lg-none">
-						<a href="{{ route('Home') }}" class="logo-side">
+						<a href="{{ route('client.index') }}" class="logo-side">
 								<img src="{{ asset('client/images/logo.png') }}" alt="Mapoly FootHub">
 						</a>
 						<div class="mobile-menu-sec mt-3">
@@ -19,8 +19,8 @@
 										<li class="{{ Route::currentRouteName() === 'matches' ? 'active-m' : '' }}">
 												<a href="{{ route('matches') }}"> Matches </a>
 										</li>
-										<li class="{{ Route::currentRouteName() === 'clubs' ? 'active-m' : '' }}">
-												<a href="about.html"> Teams </a>
+										<li class="{{ Route::currentRouteName() === 'teams' ? 'active-m' : '' }}">
+												<a href="{{ route('client.teams') }}"> Teams </a>
 										</li>
 										<li class="{{ Route::currentRouteName() === 'schedule' ? 'active-m' : '' }}">
 												<a href="{{ route('schedule') }}"> Schedule </a>
@@ -29,7 +29,7 @@
 												<a href="{{ route('news') }}"> News </a>
 										</li>
 										<li class="{{ Route::currentRouteName() === 'players' ? 'active-m' : '' }}">
-												<a href="{{ route('players') }}"> Players </a>
+												<a href="{{ route('client.players') }}"> Players </a>
 										</li>
 										<li class="{{ Route::currentRouteName() === 'media' ? 'active-m' : '' }}">
 												<a href="{{ route('media') }}"> Media </a>

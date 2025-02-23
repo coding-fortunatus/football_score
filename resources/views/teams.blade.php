@@ -1,33 +1,32 @@
 @extends('layout.app')
 
-@section('title', 'Players - Mapoly FootHub')
+@section('title', 'About - Mapoly FootHub')
 
 @section('content')
 		<section class="sub-main-banner float-start w-100">
 				<div class="sub-banner">
 						<div class="container">
-								<h1 class="text-center"> Players </h1>
+								<h1 class="text-center"> Teams </h1>
 								<nav aria-label="breadcrumb">
 										<ol class="breadcrumb">
 												<li class="breadcrumb-item"><a href="{{ route('client.index') }}">Home</a></li>
-												<li class="breadcrumb-item active" aria-current="page"> Players </li>
+												<li class="breadcrumb-item active" aria-current="page"> Teams </li>
 										</ol>
 								</nav>
 						</div>
 				</div>
 		</section>
-
 		<section class="body-part-total float-start w-100">
 				<div class="playerrs-div-total py-5">
 						<div class="golaskipers-div">
 								<div class="container">
-										{{-- <h1 class="comon-heading m-0"> GoalKeeper </h1> --}}
+										<h1 class="comon-heading m-0"> Teams or Clubs </h1>
 										<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 mt-0 mt-lg-0 g-4 g-lg-4">
-												@foreach ($players as $player)
+												@foreach ($teams as $team)
 														<div class="col">
 																<a href="players-details.html" class="cmonon-plyaars">
 																		<figure>
-																				<img src="{{ asset('client/' . $player->photo) }}" alt="gl1" />
+																				<img src="{{ asset('client/' . $team->logo) }}" alt="gl1" />
 																				<figcaption>
 																						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
 																								class="bi bi-arrow-up-right-square-fill" viewBox="0 0 16 16">
@@ -37,13 +36,13 @@
 																						</svg>
 																				</figcaption>
 																		</figure>
-																		<div class="name d-flex align-items-center justify-content-between">
-																				<h5> {{ $player->fullname }}
-																						<span class="d-block"> {{ strtoupper($player->position) }}</span>
+																		<div class="d-flex align-items-center justify-content-between">
+
+																				<h5> {{ $team->name }}
+																						<span class="d-block"> {{ $team->short_name }}</span>
 																				</h5>
-																				<span class="num"> {{ $player->wing }} </span>
+																				<span class="text-center"> {{ $team->faculty }} </span>
 																		</div>
-																		<span>{{ $player->team->name }}</h6>
 
 																</a>
 														</div>

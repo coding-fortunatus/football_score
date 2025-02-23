@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ClientController;
 use App\Http\Controllers\CoachController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FieldController;
@@ -73,9 +74,13 @@ Route::prefix('admin')->group(function () {
     });
 });
 
-Route::get('/', function () {
-    return view('index');
-})->name('Home');
+Route::controller(ClientController::class)->group(function () {
+    Route::get('/', 'index')->name('client.index');
+    Route::get('/teams', 'teams')->name('client.teams');
+    // Route::get('/team/{team_uuid}', 'team')->name('client.team');
+    Route::get('/players', 'players')->name('client.players');
+});
+
 
 Route::get('/contact-us', function () {
     return view('contact');
@@ -89,17 +94,9 @@ Route::get('/match-details', function () {
     return view('matches-details');
 })->name('match-details');
 
-Route::get('/clubs', function () {
-    return view('about');
-})->name('clubs');
-
 Route::get('/schedule', function () {
     return view('schedule');
 })->name('schedule');
-
-Route::get('/players', function () {
-    return view('players');
-})->name('players');
 
 Route::get('/player-details', function () {
     return view('players-details');

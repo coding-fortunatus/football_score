@@ -1,6 +1,6 @@
 @extends('layout.app')
 
-@section('title', 'Index - Mapoly Football match score stats')
+@section('title', 'Index - Mapoly FootHub')
 
 @section('content')
 		<section class="banner float-start w-100">
@@ -646,7 +646,7 @@
 				<div class="team-div-1">
 						<div class="container">
 								<div class="d-flex align-items-center justify-content-between">
-										<h2 class="comon-heading m-0"> Players Squad </h2>
+										<h2 class="comon-heading m-0"> Players </h2>
 										<a href="#" class="btn all-cm-btn"> Show All <svg xmlns="http://www.w3.org/2000/svg" width="16"
 														height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
 														<path fill-rule="evenodd"
@@ -656,81 +656,27 @@
 								</div>
 
 								<div class="team-slid owl-carousel owl-theme mt-5">
-										<a href="#" class="comon-plyaers">
-												<figure>
-														<img src="images/py1.jpg" alt="team1" />
-														<figcaption>
-																<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-																		class="bi bi-arrow-up-right-square-fill" viewBox="0 0 16 16">
-																		<path
-																				d="M14 0a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12zM5.904 10.803 10 6.707v2.768a.5.5 0 0 0 1 0V5.5a.5.5 0 0 0-.5-.5H6.525a.5.5 0 1 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 .707.707z" />
-																</svg>
-														</figcaption>
-												</figure>
-												<div class="name d-flex align-items-center justify-content-between">
-														<h5> Dominick Dumbleton
-																<span class="d-block"> STRIKER</span>
-														</h5>
-														<span class="num"> 10 </span>
-												</div>
-										</a>
-
-										<a href="#" class="comon-plyaers">
-												<figure>
-														<img src="images/py2.jpg" alt="team1" />
-														<figcaption>
-																<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-																		class="bi bi-arrow-up-right-square-fill" viewBox="0 0 16 16">
-																		<path
-																				d="M14 0a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12zM5.904 10.803 10 6.707v2.768a.5.5 0 0 0 1 0V5.5a.5.5 0 0 0-.5-.5H6.525a.5.5 0 1 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 .707.707z" />
-																</svg>
-														</figcaption>
-												</figure>
-												<div class="name d-flex align-items-center justify-content-between">
-														<h5> Jores Leperto
-																<span class="d-block"> Defender</span>
-														</h5>
-														<span class="num"> 32 </span>
-												</div>
-										</a>
-
-										<a href="#" class="comon-plyaers">
-												<figure>
-														<img src="images/py3.jpg" alt="team1" />
-														<figcaption>
-																<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-																		class="bi bi-arrow-up-right-square-fill" viewBox="0 0 16 16">
-																		<path
-																				d="M14 0a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12zM5.904 10.803 10 6.707v2.768a.5.5 0 0 0 1 0V5.5a.5.5 0 0 0-.5-.5H6.525a.5.5 0 1 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 .707.707z" />
-																</svg>
-														</figcaption>
-												</figure>
-												<div class="name d-flex align-items-center justify-content-between">
-														<h5> Sebasti Nikola
-																<span class="d-block"> Forward </span>
-														</h5>
-														<span class="num"> 99 </span>
-												</div>
-										</a>
-
-										<a href="#" class="comon-plyaers">
-												<figure>
-														<img src="images/py4.jpg" alt="team1" />
-														<figcaption>
-																<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-																		class="bi bi-arrow-up-right-square-fill" viewBox="0 0 16 16">
-																		<path
-																				d="M14 0a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12zM5.904 10.803 10 6.707v2.768a.5.5 0 0 0 1 0V5.5a.5.5 0 0 0-.5-.5H6.525a.5.5 0 1 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 .707.707z" />
-																</svg>
-														</figcaption>
-												</figure>
-												<div class="name d-flex align-items-center justify-content-between">
-														<h5> Ores Luperto
-																<span class="d-block"> STRIKER</span>
-														</h5>
-														<span class="num"> 15 </span>
-												</div>
-										</a>
+										@foreach ($players as $player)
+												<a href="#" class="comon-plyaers">
+														<figure>
+																<img src="{{ asset('client/' . $player->photo) }}" alt="team1" />
+																<figcaption>
+																		<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+																				class="bi bi-arrow-up-right-square-fill" viewBox="0 0 16 16">
+																				<path
+																						d="M14 0a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12zM5.904 10.803 10 6.707v2.768a.5.5 0 0 0 1 0V5.5a.5.5 0 0 0-.5-.5H6.525a.5.5 0 1 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 .707.707z" />
+																		</svg>
+																</figcaption>
+														</figure>
+														<div class="name d-flex align-items-center justify-content-between">
+																<h5> {{ $player->fullname }}
+																		<span class="d-block"> {{ strtoupper($player->position) }}</span>
+																</h5>
+																<span class="num"> {{ $player->wing }} </span>
+														</div>
+														<span>{{ $player->team->name }}</h6>
+												</a>
+										@endforeach
 
 								</div>
 						</div>
@@ -739,301 +685,13 @@
 				<div class="join-us-div">
 						<div class="container">
 								<div class="d-lg-flex justify-content-between">
-										<h1 class="comon-heading m-0"> Become part of a Great Team </h1>
-										<a href="#" class="btn all-cm-btn mt-4 mt-lg-0"> Join Us <svg xmlns="http://www.w3.org/2000/svg"
-														width="16" height="16" fill="currentColor" class="bi bi-arrow-up-short" viewBox="0 0 16 16">
-														<path fill-rule="evenodd"
-																d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z" />
-												</svg> </a>
+										<h1 class="comon-heading m-0"> Here we bring you live updates on campus football matches.
+										</h1>
 								</div>
 						</div>
 				</div>
 
-				<div class="team-products py-5">
-						<div class="container">
-								<div class="d-flex justify-content-between align-items-center">
-										<h1 class="comon-heading m-0"> Our Team Store </h1>
-										<a href="#" class="btn all-cm-btn"> View All <svg xmlns="http://www.w3.org/2000/svg" width="16"
-														height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-														<path fill-rule="evenodd"
-																d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z">
-														</path>
-												</svg> </a>
-								</div>
-
-								<ul class="nav nav-pills my-4" id="pills-tab" role="tablist">
-										<li class="nav-item" role="presentation">
-												<button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
-														type="button" role="tab" aria-controls="pills-home" aria-selected="true">New</button>
-										</li>
-										<li class="nav-item" role="presentation">
-												<button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile"
-														type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Best
-														Selling</button>
-										</li>
-
-								</ul>
-								<div class="tab-content " id="pills-tabContent">
-										<div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-												<div class="news-slid owl-carousel owl-theme">
-														<a href="#" class="items-shop">
-																<figure>
-																		<img src="images/product01.jpg" alt="products" />
-																		<figcaption>
-																				10% Off
-																		</figcaption>
-																		<ul class="list-unstyled">
-																				<li>
-																						<button class="btn save">
-																								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-																										class="bi bi-heart-fill" viewBox="0 0 16 16">
-																										<path fill-rule="evenodd"
-																												d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
-																								</svg>
-																						</button>
-																				</li>
-																				<li>
-																						<button class="btn save">
-																								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-																										class="bi bi-cart3" viewBox="0 0 16 16">
-																										<path
-																												d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
-																								</svg>
-																						</button>
-																				</li>
-																		</ul>
-																</figure>
-																<h6> T-shirt </h6>
-																<h5> soccer jersey </h5>
-																<h4> $45</h4>
-														</a>
-
-														<a href="#" class="items-shop">
-																<figure>
-																		<img src="images/product02.webp" alt="products" />
-
-																		<ul class="list-unstyled">
-																				<li>
-																						<button class="btn save">
-																								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-																										class="bi bi-heart-fill" viewBox="0 0 16 16">
-																										<path fill-rule="evenodd"
-																												d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
-																								</svg>
-																						</button>
-																				</li>
-																				<li>
-																						<button class="btn save">
-																								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-																										class="bi bi-cart3" viewBox="0 0 16 16">
-																										<path
-																												d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
-																								</svg>
-																						</button>
-																				</li>
-																		</ul>
-																</figure>
-																<h6> Shoes </h6>
-																<h5> soccer jersey </h5>
-																<h4> $15</h4>
-														</a>
-
-														<a href="#" class="items-shop">
-																<figure>
-																		<img src="images/product-13-copyright-393x426.webp" alt="products" />
-																		<figcaption>
-																				5% Off
-																		</figcaption>
-																		<ul class="list-unstyled">
-																				<li>
-																						<button class="btn save">
-																								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-																										class="bi bi-heart-fill" viewBox="0 0 16 16">
-																										<path fill-rule="evenodd"
-																												d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
-																								</svg>
-																						</button>
-																				</li>
-																				<li>
-																						<button class="btn save">
-																								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-																										class="bi bi-cart3" viewBox="0 0 16 16">
-																										<path
-																												d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
-																								</svg>
-																						</button>
-																				</li>
-																		</ul>
-																</figure>
-																<h6> Gloves </h6>
-																<h5> soccer jersey </h5>
-																<h4> $45</h4>
-														</a>
-
-														<a href="#" class="items-shop">
-																<figure>
-																		<img src="images/4.jpg" alt="products" />
-																		<ul class="list-unstyled">
-																				<li>
-																						<button class="btn save">
-																								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-																										class="bi bi-heart-fill" viewBox="0 0 16 16">
-																										<path fill-rule="evenodd"
-																												d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
-																								</svg>
-																						</button>
-																				</li>
-																				<li>
-																						<button class="btn save">
-																								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-																										class="bi bi-cart3" viewBox="0 0 16 16">
-																										<path
-																												d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
-																								</svg>
-																						</button>
-																				</li>
-																		</ul>
-																</figure>
-																<h6> t-shirt </h6>
-																<h5> soccer jersey </h5>
-																<h4> $25</h4>
-														</a>
-
-												</div>
-										</div>
-										<div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-												<div class="news-slid owl-carousel owl-theme">
-														<a href="#" class="items-shop">
-																<figure>
-																		<img src="images/product01.jpg" alt="products" />
-																		<figcaption>
-																				10% Off
-																		</figcaption>
-																		<ul class="list-unstyled">
-																				<li>
-																						<button class="btn save">
-																								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-																										class="bi bi-heart-fill" viewBox="0 0 16 16">
-																										<path fill-rule="evenodd"
-																												d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
-																								</svg>
-																						</button>
-																				</li>
-																				<li>
-																						<button class="btn save">
-																								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-																										class="bi bi-cart3" viewBox="0 0 16 16">
-																										<path
-																												d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
-																								</svg>
-																						</button>
-																				</li>
-																		</ul>
-																</figure>
-																<h6> T-shirt </h6>
-																<h5> soccer jersey </h5>
-																<h4> $45</h4>
-														</a>
-
-														<a href="#" class="items-shop">
-																<figure>
-																		<img src="images/product02.webp" alt="products" />
-
-																		<ul class="list-unstyled">
-																				<li>
-																						<button class="btn save">
-																								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-																										class="bi bi-heart-fill" viewBox="0 0 16 16">
-																										<path fill-rule="evenodd"
-																												d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
-																								</svg>
-																						</button>
-																				</li>
-																				<li>
-																						<button class="btn save">
-																								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-																										class="bi bi-cart3" viewBox="0 0 16 16">
-																										<path
-																												d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
-																								</svg>
-																						</button>
-																				</li>
-																		</ul>
-																</figure>
-																<h6> Shoes </h6>
-																<h5> soccer jersey </h5>
-																<h4> $15</h4>
-														</a>
-
-														<a href="#" class="items-shop">
-																<figure>
-																		<img src="images/product-13-copyright-393x426.webp" alt="products" />
-																		<figcaption>
-																				5% Off
-																		</figcaption>
-																		<ul class="list-unstyled">
-																				<li>
-																						<button class="btn save">
-																								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-																										class="bi bi-heart-fill" viewBox="0 0 16 16">
-																										<path fill-rule="evenodd"
-																												d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
-																								</svg>
-																						</button>
-																				</li>
-																				<li>
-																						<button class="btn save">
-																								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-																										class="bi bi-cart3" viewBox="0 0 16 16">
-																										<path
-																												d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
-																								</svg>
-																						</button>
-																				</li>
-																		</ul>
-																</figure>
-																<h6> Gloves </h6>
-																<h5> soccer jersey </h5>
-																<h4> $45</h4>
-														</a>
-
-														<a href="#" class="items-shop">
-																<figure>
-																		<img src="images/4.jpg" alt="products" />
-																		<ul class="list-unstyled">
-																				<li>
-																						<button class="btn save">
-																								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-																										class="bi bi-heart-fill" viewBox="0 0 16 16">
-																										<path fill-rule="evenodd"
-																												d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
-																								</svg>
-																						</button>
-																				</li>
-																				<li>
-																						<button class="btn save">
-																								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-																										class="bi bi-cart3" viewBox="0 0 16 16">
-																										<path
-																												d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
-																								</svg>
-																						</button>
-																				</li>
-																		</ul>
-																</figure>
-																<h6> t-shirt </h6>
-																<h5> soccer jersey </h5>
-																<h4> $25</h4>
-														</a>
-
-												</div>
-										</div>
-								</div>
-
-						</div>
-				</div>
-
-				<div class="newd-blogs-div py-5">
+				{{-- <div class="newd-blogs-div py-5">
 						<div class="container">
 								<div class="d-flex align-items-center justify-content-between">
 
@@ -1141,6 +799,6 @@
 										</div>
 								</div>
 						</div>
-				</div>
+				</div> --}}
 		</section>
 @endsection
