@@ -8,7 +8,7 @@ class FetchAllOfficials
 {
     public function execute()
     {
-        $officials = Official::all();
+        $officials = Official::orderBy('role', 'desc')->get();
         if ($officials->isNotEmpty()) {
             return $officials;
         }

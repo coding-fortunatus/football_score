@@ -8,7 +8,7 @@ class FetchAllTeams
 {
     public function execute()
     {
-        $teams = Team::all();
+        $teams = Team::orderBy('faculty', 'asc')->get();
         return $teams->isNotEmpty() ? $teams : false;
     }
 }

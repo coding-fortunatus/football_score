@@ -8,7 +8,7 @@ class FetchAllLeagues
 {
     public function execute()
     {
-        $leagues = League::all();
+        $leagues = League::orderBy('status', 'asc')->get();
         return $leagues->isNotEmpty() ? $leagues : false;
     }
 }
