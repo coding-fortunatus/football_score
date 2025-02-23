@@ -72,21 +72,11 @@
 										</a>
 								</li>
 								{{-- Fields --}}
-								<li class="sidebar-dropdown">
-										<a href="#">
+								<li>
+										<a href="{{ route('fields.index') }}">
 												<i class="bi bi-square-half"></i>
 												<span class="menu-text">Fields</span>
 										</a>
-										<div class="sidebar-submenu">
-												<ul>
-														<li>
-																<a href="#">Create Field</a>
-														</li>
-														<li>
-																<a href="#">Field List</a>
-														</li>
-												</ul>
-										</div>
 								</li>
 								{{-- News --}}
 								<li class="sidebar-dropdown">

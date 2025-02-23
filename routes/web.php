@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CoachController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\FieldController;
 use App\Http\Controllers\LeagueController;
 use App\Http\Controllers\OfficialController;
 use App\Http\Controllers\PlayerController;
@@ -59,6 +60,16 @@ Route::prefix('admin')->group(function () {
         Route::get('/edit/{player_uuid}', 'edit')->name('players.edit');
         Route::put('/update/{player_uuid}', 'update')->name('players.update');
         Route::get('/delete/{player_uuid}', 'destroy')->name('players.destroy');
+    });
+
+    Route::controller(FieldController::class)->prefix('fields')->group(function () {
+        Route::get('/', 'index')->name('fields.index');
+        // Route::get('/{field_uuid}', 'show')->name('fields.show');
+        Route::get('/create', 'create')->name('fields.create');
+        Route::post('/store', 'store')->name('fields.store');
+        Route::get('/edit/{field_uuid}', 'edit')->name('fields.edit');
+        Route::put('/update/{field_uuid}', 'update')->name('fields.update');
+        Route::get('/delete/{field_uuid}', 'destroy')->name('fields.destroy');
     });
 });
 
