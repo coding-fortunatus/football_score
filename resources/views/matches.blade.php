@@ -9,7 +9,7 @@
 								<h1 class="text-center"> Matches</h1>
 								<nav aria-label="breadcrumb">
 										<ol class="breadcrumb">
-												<li class="breadcrumb-item"><a href="{{ route('Home') }}">Home</a></li>
+												<li class="breadcrumb-item"><a href="{{ route('client.index') }}">Home</a></li>
 												<li class="breadcrumb-item active" aria-current="page">Matches</li>
 										</ol>
 								</nav>
