@@ -10,73 +10,56 @@
 				<div class="sidebarMenuScroll">
 						<ul>
 								{{-- Dashboard --}}
-								<li class="active">
+								<li class="{{ Route::currentRouteName() === 'Dashboard' ? 'active' : '' }}">
 										<a href="{{ route('Dashboard') }}">
 												<i class="bi bi-house"></i>
 												<span class="menu-text">Dashboards</span>
 										</a>
 								</li>
 								{{-- Schedules --}}
-								<li>
+								<li class="{{ Route::currentRouteName() === 'schedules.index' ? 'active' : '' }}">
 										<a href="{{ route('schedules.index') }}">
 												<i class="bi bi-calendar-week"></i>
 												<span class="menu-text">Schedules</span>
 										</a>
 								</li>
 								{{-- Matches --}}
-								<li>
+								<li class="{{ Route::currentRouteName() === 'matches.index' ? 'active' : '' }}">
 										<a href="{{ route('matches.index') }}">
 												<i class="bi bi-diagram-2"></i>
 												<span class="menu-text">Matches</span>
 										</a>
 								</li>
 								{{-- Teams --}}
-								<li>
+								<li class="{{ Route::currentRouteName() === 'teams.index' ? 'active' : '' }}">
 										<a href="{{ route('teams.index') }}">
 												<i class="bi bi-ui-checks"></i>
 												<span class="menu-text">Teams</span>
 										</a>
 								</li>
 								{{-- Players --}}
-								<li>
+								<li class="{{ Route::currentRouteName() === 'players.index' ? 'active' : '' }}">
 										<a href="{{ route('players.index') }}">
 												<i class="bi bi-people"></i>
 												<span class="menu-text">Players</span>
 										</a>
 								</li>
 								{{-- Officials --}}
-								<li>
+								<li class="{{ Route::currentRouteName() === 'officials.index' ? 'active' : '' }}">
 										<a href="{{ route('officials.index') }}">
 												<i class="bi bi-person-check"></i>
 												<span class="menu-text">Officials</span>
 										</a>
 								</li>
 								{{-- Fields --}}
-								<li>
+								<li class="{{ Route::currentRouteName() === 'fields.index' ? 'active' : '' }}">
 										<a href="{{ route('fields.index') }}">
 												<i class="bi bi-square-half"></i>
 												<span class="menu-text">Fields</span>
 										</a>
 								</li>
-								{{-- News --}}
-								{{-- <li class="sidebar-dropdown">
-										<a href="#">
-												<i class="bi bi-newspaper"></i>
-												<span class="menu-text">News</span>
-										</a>
-										<div class="sidebar-submenu">
-												<ul>
-														<li>
-																<a href="#">Create News</a>
-														</li>
-														<li>
-																<a href="#">News List</a>
-														</li>
-												</ul>
-										</div>
-								</li> --}}
 								{{-- Leagues --}}
-								<li>
+								<li class="{{ Route::currentRouteName() === 'leagues.index' ? 'active' : '' }}">
 										<a href="{{ route('leagues.index') }}">
 												<i class="bi bi-life-preserver"></i>
 												<span class="menu-text">Leagues</span>

@@ -54,7 +54,7 @@
 																				@else
 																						@foreach ($officials as $official)
 																								<tr>
-																										<td>{{ $official->id }}</td>
+																										<td>{{ $loop->iteration }}</td>
 																										<td>{{ $official->fullname }}</td>
 																										<td>{{ $official->email }}</td>
 																										<td>{{ $official->phone }}</td>

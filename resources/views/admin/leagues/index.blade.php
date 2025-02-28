@@ -55,7 +55,7 @@
 																				@else
 																						@foreach ($leagues as $league)
 																								<tr>
-																										<td>{{ $league->id }}</td>
+																										<td>{{ $loop->iteration }}</td>
 																										<td>{{ $league->title }}</td>
 																										<td>{{ $league->semester_season }}</td>
 																										<td>{{ $league->teams }}</td>

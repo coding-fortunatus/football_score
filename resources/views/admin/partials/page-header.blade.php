@@ -24,21 +24,6 @@
 		<!-- Header actions ccontainer start -->
 		<div class="header-actions-container">
 
-				<!-- Search container start -->
-				<div class="search-container d-lg-block d-none">
-
-						<!-- Search input group start -->
-						<div class="input-group">
-								<input type="text" class="form-control" id="searchAny" placeholder="Search anything">
-								<button class="btn" type="button">
-										<i class="bi bi-search"></i>
-								</button>
-						</div>
-						<!-- Search input group end -->
-
-				</div>
-				<!-- Search container end -->
-
 				<!-- Header actions start -->
 				<ul class="header-actions">
 						<li class="dropdown">
@@ -51,7 +36,7 @@
 								</a>
 								<div class="dropdown-menu dropdown-menu-end" aria-labelledby="userSettings">
 										<div class="header-profile-actions">
-												<a href="#">Profile</a>
+												{{-- <a href="#">Profile</a> --}}
 												{{-- <a href="#">Settings</a> --}}
 												<a href="#">Logout</a>
 										</div>

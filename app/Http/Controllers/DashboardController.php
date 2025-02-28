@@ -20,7 +20,7 @@ class DashboardController extends Controller
         $officials = Official::count();
 
         $scheduled_leagues = League::all()->where('status', 'Scheduled');
-        $refrees           = Official::all()->where('role', 'Refree');
+        $refrees           = Official::all()->where('role', 'Referee');
         $coaches           = $action->execute();
         $message           = $coaches ? false : true;
         return view(

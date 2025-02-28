@@ -31,8 +31,8 @@
 																<a href="{{ route('matches.create') }}" class="btn btn-primary btn-sm">
 																		<i class="bi bi-plus"></i> New Match
 																</a>
-																<a href="{{ route('scorers.create') }}" class="btn btn-warning btn-sm">
-																		<i class="bi bi-plus"></i> Add Goal Scorers
+																<a href="{{ route('scorers.index') }}" class="btn btn-warning btn-sm">
+																		<i class="bi bi-clock"></i> Goal Scorers
 																</a>
 														</div>
 												</div>
@@ -72,13 +72,13 @@
 																														<ul class="list-unstyled">
 																																@foreach ($match->goalScorers as $scorer)
 																																		<li>
-																																				{{ $scorer->player->name ?? 'Unknown Player' }}
+																																				{{ $scorer->player->fullname ?? 'Unknown Player' }}
 																																				@if ($scorer->player && $scorer->player->team)
 																																						({{ $scorer->player->team->short_name }})
 																																				@else
 																																						(Unknown Team)
 																																				@endif
-																																				- {{ $scorer->goal_time }}'
+																																				- {{ $scorer->minute }}'
 																																		</li>
 																																@endforeach
 																														</ul>

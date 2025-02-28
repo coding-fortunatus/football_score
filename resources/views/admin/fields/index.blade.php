@@ -51,7 +51,7 @@
 																				@else
 																						@foreach ($fields as $field)
 																								<tr>
-																										<td>{{ $field->id }}</td>
+																										<td>{{ $loop->iteration }}</td>
 																										<td>{{ $field->name }}</td>
 																										<td>{{ $field->location }}</td>
 																										<td>0</td>

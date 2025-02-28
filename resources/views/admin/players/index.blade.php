@@ -55,7 +55,7 @@
 																				@else
 																						@foreach ($players as $player)
 																								<tr>
-																										<td>{{ $player->id }}</td>
+																										<td>{{ $loop->iteration }}</td>
 																										<td>{{ $player->fullname }}</td>
 																										<td>{{ $player->phone }}</td>
 																										<td>{{ $player->position }}</td>

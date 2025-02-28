@@ -53,7 +53,7 @@
 																				@else
 																						@foreach ($teams as $team)
 																								<tr>
-																										<td>{{ $team->id }}</td>
+																										<td>{{ $loop->iteration }}</td>
 																										<td>{{ $team->name }}</td>
 																										<td>{{ $team->short_name }}</td>
 																										<td>{{ $team->faculty }}</td>

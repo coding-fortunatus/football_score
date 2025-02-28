@@ -55,7 +55,7 @@
 																				@else
 																						@foreach ($schedules as $schedule)
 																								<tr>
-																										<td>{{ $schedule->id }}</td>
+																										<td>{{ $loop->iteration }}</td>
 																										<td>{{ $schedule->team1->short_name }}</td>
 																										<td>{{ $schedule->team2->short_name }}</td>
 																										<td>{{ $schedule->field->name }}</td>
