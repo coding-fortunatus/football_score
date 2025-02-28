@@ -11,7 +11,7 @@ class CreateGoalScorerRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +22,9 @@ class CreateGoalScorerRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'match_id' => 'required|exists:football_matches,id',
+            'player_id' => 'required|exists:players,id',
+            'minute' => 'required|integer|min:1|max:120',
         ];
     }
 }
