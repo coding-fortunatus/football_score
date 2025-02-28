@@ -29,6 +29,6 @@ class FootballMatch extends Model
 
     public function goalScorers()
     {
-        return $this->hasMany(GoalScorer::class);
+        return $this->hasMany(GoalScorer::class, 'match_id');
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Actions\Matches;
+namespace App\Action\Matches;
 
 use App\Models\FootballMatch;
 

@@ -4,6 +4,8 @@ use App\Http\Controllers\ClientController;
 use App\Http\Controllers\CoachController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FieldController;
+use App\Http\Controllers\FootballMatchController;
+use App\Http\Controllers\GoalScorerController;
 use App\Http\Controllers\LeagueController;
 use App\Http\Controllers\OfficialController;
 use App\Http\Controllers\PlayerController;
@@ -82,6 +84,26 @@ Route::prefix('admin')->group(function () {
         Route::get('/edit/{schedule_uuid}', 'edit')->name('schedules.edit');
         Route::patch('/update/{schedule_uuid}', 'update')->name('schedules.update');
         Route::get('/delete/{schedule_uuid}', 'destroy')->name('schedules.destroy');
+    });
+
+    Route::controller(FootballMatchController::class)->prefix('matches')->group(function () {
+        Route::get('/', 'index')->name('matches.index');
+        // Route::get('/{match_uuid}', 'show')->name('matches.show');
+        Route::get('/create', 'create')->name('matches.create');
+        Route::post('/store', 'store')->name('matches.store');
+        Route::get('/edit/{match_uuid}', 'edit')->name('matches.edit');
+        Route::patch('/update/{match_uuid}', 'update')->name('matches.update');
+        Route::get('/delete/{match_uuid}', 'destroy')->name('matches.destroy');
+    });
+
+    Route::controller(GoalScorerController::class)->prefix('goal-scorers')->group(function () {
+        Route::get('/', 'index')->name('scorers.index');
+        // Route::get('/{id}', 'show')->name('scorers.show');
+        Route::get('/create', 'create')->name('scorers.create');
+        Route::post('/store', 'store')->name('scorers.store');
+        Route::get('/edit/{id}', 'edit')->name('scorers.edit');
+        Route::patch('/update/{id}', 'update')->name('scorers.update');
+        Route::get('/delete/{id}', 'destroy')->name('scorers.destroy');
     });
 });
 

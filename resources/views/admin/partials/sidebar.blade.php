@@ -24,21 +24,11 @@
 										</a>
 								</li>
 								{{-- Matches --}}
-								<li class="sidebar-dropdown">
-										<a href="#">
+								<li>
+										<a href="{{ route('matches.index') }}">
 												<i class="bi bi-diagram-2"></i>
 												<span class="menu-text">Matches</span>
 										</a>
-										<div class="sidebar-submenu">
-												<ul>
-														<li>
-																<a href="#">Add new match</a>
-														</li>
-														<li>
-																<a href="#">Match list</a>
-														</li>
-												</ul>
-										</div>
 								</li>
 								{{-- Teams --}}
 								<li>
@@ -69,7 +59,7 @@
 										</a>
 								</li>
 								{{-- News --}}
-								<li class="sidebar-dropdown">
+								{{-- <li class="sidebar-dropdown">
 										<a href="#">
 												<i class="bi bi-newspaper"></i>
 												<span class="menu-text">News</span>
@@ -84,7 +74,7 @@
 														</li>
 												</ul>
 										</div>
-								</li>
+								</li> --}}
 								{{-- Leagues --}}
 								<li>
 										<a href="{{ route('leagues.index') }}">
