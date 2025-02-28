@@ -7,6 +7,7 @@ use App\Http\Controllers\FieldController;
 use App\Http\Controllers\LeagueController;
 use App\Http\Controllers\OfficialController;
 use App\Http\Controllers\PlayerController;
+use App\Http\Controllers\ScheduleController;
 use App\Http\Controllers\TeamController;
 use Illuminate\Support\Facades\Route;
 
@@ -71,6 +72,16 @@ Route::prefix('admin')->group(function () {
         Route::get('/edit/{field_uuid}', 'edit')->name('fields.edit');
         Route::put('/update/{field_uuid}', 'update')->name('fields.update');
         Route::get('/delete/{field_uuid}', 'destroy')->name('fields.destroy');
+    });
+
+    Route::controller(ScheduleController::class)->prefix('schedules')->group(function () {
+        Route::get('/', 'index')->name('schedules.index');
+        // Route::get('/{schedule_uuid}', 'show')->name('schedules.show');
+        Route::get('/create', 'create')->name('schedules.create');
+        Route::post('/store', 'store')->name('schedules.store');
+        Route::get('/edit/{schedule_uuid}', 'edit')->name('schedules.edit');
+        Route::patch('/update/{schedule_uuid}', 'update')->name('schedules.update');
+        Route::get('/delete/{schedule_uuid}', 'destroy')->name('schedules.destroy');
     });
 });
 

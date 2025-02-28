@@ -17,21 +17,11 @@
 										</a>
 								</li>
 								{{-- Schedules --}}
-								<li class="sidebar-dropdown">
-										<a href="#">
+								<li>
+										<a href="{{ route('schedules.index') }}">
 												<i class="bi bi-calendar-week"></i>
 												<span class="menu-text">Schedules</span>
 										</a>
-										<div class="sidebar-submenu">
-												<ul>
-														<li>
-																<a href="#">Schedule list</a>
-														</li>
-														<li>
-																<a href="#">Create Schedule</a>
-														</li>
-												</ul>
-										</div>
 								</li>
 								{{-- Matches --}}
 								<li class="sidebar-dropdown">
