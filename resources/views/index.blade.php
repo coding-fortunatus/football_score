@@ -659,7 +659,7 @@
 										@foreach ($players as $player)
 												<a href="#" class="comon-plyaers">
 														<figure>
-																<img src="{{ asset('client/' . $player->photo) }}" alt="team1" />
+																<img src="{{ asset('client/' . $player->photo) }}" alt="{{ $player->fullname . 'picture' }}" />
 																<figcaption>
 																		<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
 																				class="bi bi-arrow-up-right-square-fill" viewBox="0 0 16 16">

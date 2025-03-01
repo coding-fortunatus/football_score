@@ -10,25 +10,16 @@
 						<div class="collapse navbar-collapse" id="navbarSupportedContent">
 								<ul class="navbar-nav ms-auto mb-5 mb-lg-0">
 										<li class="nav-item">
-												<a class="nav-link" href="{{ route('matches') }}">Matches</a>
+												<a class="nav-link" href="{{ route('client.matches') }}">Matches</a>
 										</li>
 										<li class="nav-item">
 												<a class="nav-link " href="{{ route('client.teams') }}">Teams</a>
 										</li>
 										<li class="nav-item">
-												<a class="nav-link " href="{{ route('schedule') }}">Schedule</a>
-										</li>
-										<li class="nav-item">
-												<a class="nav-link " href="{{ route('news') }}">News</a>
+												<a class="nav-link " href="{{ route('client.schedules') }}">Schedule</a>
 										</li>
 										<li class="nav-item">
 												<a class="nav-link " href="{{ route('client.players') }}">Players</a>
-										</li>
-										<li class="nav-item">
-												<a class="nav-link " href="{{ route('media') }}">Media</a>
-										</li>
-										<li class="nav-item">
-												<a class="nav-link " href="{{ route('contact') }}">Contact</a>
 										</li>
 										{{-- <li class="nav-item">
 												<a class="nav-link btn bar-btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRightmobile"><i
