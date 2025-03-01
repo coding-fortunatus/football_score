@@ -314,23 +314,6 @@ header .navbar-light .navbar-brand{
 
 	left: 0;
   }
-  .slide-2 {
-	background: url(../images/banner2.jpg) no-repeat;
-	left: 100%;
-	background-size: cover;
-
-  }
-  .slide-3 {
-	background: url(../images/banner1.jpg) no-repeat;
-	left: 200%;
-	background-size: cover;
-
-  }
-  .slide-4 {
-	background: url(../images/banner1.jpg) no-repeat;
-	left: 300%;
-	background-size: cover;
-  }
   .slider {
 	display: flex;
 	justify-content: flex-start;

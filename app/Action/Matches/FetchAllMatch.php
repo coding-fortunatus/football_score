@@ -8,7 +8,7 @@ class FetchAllMatch
 {
     public function execute()
     {
-        $match = FootballMatch::with('schedule', 'winner')->get();
+        $match = FootballMatch::with('schedule', 'winner')->orderBy('winner_team_id', 'desc')->get();
         return $match->isNotEmpty() ? $match : false;
     }
 }
